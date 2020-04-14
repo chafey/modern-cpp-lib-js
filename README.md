@@ -47,5 +47,4 @@ To configure, build and test:
 
 After building, you can run the browser based test by running an http server
 at the root of this project and opening the file test/browser/index.  I use 
-[HTTP Server / HTML Preview]
-(https://marketplace.visualstudio.com/items?itemName=Flixs.vs-code-http-server-and-html-preview) 
+[HTTP Server / HTML Preview](https://marketplace.visualstudio.com/items?itemName=Flixs.vs-code-http-server-and-html-preview)

@@ -1,7 +1,5 @@
 let modernLibrary = require('../../build/src/modern_cpp_lib_js.js');
 
-console.log(modernLibrary._jsadd);
-
 modernLibrary.onRuntimeInitialized = async _ => {
   let result = modernLibrary._jsadd(1,1);
   console.log(result)
