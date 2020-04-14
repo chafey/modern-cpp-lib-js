@@ -1,5 +1,5 @@
 # Only tested with cmake versions 3.17
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.15)
 
 project (ModernCPPLibJS
   LANGUAGES CXX)

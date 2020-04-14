@@ -13,18 +13,6 @@ But expanded to include cross compiling to JavaScript/WASM using Emscripten
 * Emscripten SDK 1.39.4 or better
 * NodeJS 8.0 or later
 
-## Docker Support
-
-The entire project can be built in a docker container via the 
-emscripten-docker.sh script:
-
-```bash
-$ ./emscripten-docker.sh
-emscripten@6150e63b4413:/src$ 
-```
-
-This can be helpful if you don't want to install the dependencies on your
-development machine.
 
 ## Visual Studio Code Remote Containers Support
 
@@ -32,6 +20,9 @@ This project includes support for developing in a docker container using the
 Visual Studio Code Remote - Containers extension.  The configured docker container
 includes emscripten, cmake and gcc so you can build, debug and run this project
 immediately without having to deal with toolchain dependencies.
+
+NOTE: If you don't use VS Code but want to use Docker, you can try using the 
+Dockerfile in the .devcontainer folder.
 
 ## Building JS/WASM
 
