@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">   
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../build/src/modern_cpp_lib_js.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Modern CMake with Emscripten Example</h1>
+        5 + 10 = <span id="result"></span>
+      </div>
+</div>
+</body>
+
+<script>
+    Module.onRuntimeInitialized = async _ => {
+      const result = Module._jsadd(5,10)
+      $('#result').text(result)
+    }
+</script>
+</html>
