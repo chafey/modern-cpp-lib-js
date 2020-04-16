@@ -19,7 +19,8 @@ But expanded to include cross compiling to JavaScript/WASM using Emscripten
 This project includes support for developing in a docker container using the 
 Visual Studio Code Remote - Containers extension.  The configured docker container
 includes emscripten, cmake and gcc so you can build, debug and run this project
-immediately without having to deal with toolchain dependencies.
+immediately without having to deal with toolchain dependencies. The default build task
+(shift+control+b) is to configure, build and run the tests
 
 NOTE: If you don't use VS Code but want to use Docker, you can try using the 
 Dockerfile in the .devcontainer folder.

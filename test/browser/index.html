@@ -14,6 +14,7 @@
           Module._jsadd(5,10) = <span id="result"></span>
         </pre>
       </div>
+      RLE Decode Time: <span id="rleDecodeTime"></span>
 </div>
 </body>
 
@@ -21,6 +22,29 @@
     Module.onRuntimeInitialized = async _ => {
       const result = Module._jsadd(5,10)
       $('#result').text(result)
-    }
+
+    // embind
+    fetch('../../extern/modern-cpp-lib/tests/fixtures/ct.rle')
+    .then((response) => {
+      return response.arrayBuffer();
+    })
+    .then((arrayBuffer) => {
+      const source = new Uint8Array(arrayBuffer);
+      let instance = new Module.RleDecode(300000, 512*512*2);
+      const sourceBytes = instance.getSourceBytes();
+      sourceBytes.set(source);
+
+      const begin = performance.now();
+      for(var i=0; i < 1000; i++) {
+        instance.decode();
+      }
+      const end = performance.now();
+      $('#rleDecodeTime').text((end-begin) + ' ms');
+
+      var decoded = instance.getDestinationBytes();
+      console.log('decoded length = ', decoded.length);
+      instance.delete();
+    });
+  }
 </script>
 </html>
