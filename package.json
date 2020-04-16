@@ -1,0 +1,22 @@
+{
+  "name": "@chafey/modern-cpp-lib",
+  "version": "1.0.0",
+  "description": "JS/WASM build of the modern-cpp-lib example",
+  "main": "dist/modern_cpp_lib_js.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chafey/modern-cpp-lib-js.git"
+  },
+  "author": "Chris Hafey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chafey/modern-cpp-lib-js/issues"
+  },
+  "homepage": "https://github.com/chafey/modern-cpp-lib-js#readme"
+}
