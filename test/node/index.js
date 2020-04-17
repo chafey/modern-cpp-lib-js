@@ -1,4 +1,4 @@
-let modernLibrary = require('../../build/src/modern_cpp_lib_js.js');
+let modernLibrary = require('../../dist/modern_cpp_lib_js.js');
 const fs = require('fs')
 
 modernLibrary.onRuntimeInitialized = async _ => {
